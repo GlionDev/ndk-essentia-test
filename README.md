@@ -10,7 +10,7 @@ Python `Librosa` 라이브러리를 통해 학습된 AI 모델의 입력 데이�
 
 ### Essentia 도입 중단 사유
 1. 알고리즘의 태생적 불일치
-    - **Librosa** : 모델 학습에 사용된 Onnx 모델은 Librosa 기반으로 추출한 특징 데이터로 학습되었음. Chromagram 추출 시 사용된 
+    - **Librosa** : 모델 학습에 사용된 데이터는 Librosa 기반으로 추출한 특징 데이터로 학습되었음. Chromagram 추출 시 사용된 
     `librosa.feature.chroma_cqt` 는 재귀적 다운샘플링(Recursive Downsampling) 방식을 사용하여 시간 영역에서 파형을 정교하게 분석하므로 특히 저음역대의
     해상도가 매우 뛰어남.
     - **Essentia** : Chromagram 알고리즘에 사용되는 `ConstantQ` 알고리즘은 FFT 기반의 근사 방식을 사용함.
